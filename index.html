@@ -1,0 +1,49 @@
+// je vais créer un objet et une méthode qui affiche les informations du salarié 
+var infoSalarie = {
+    nom : 'Dugary',
+    prenom : 'Laurent',
+    age : 40,
+    numSecu : 1234757, 
+    dateDebut : '19/06/2024',
+    afficheInfos : function (){
+        console.log('nom : ' +this.nom, 'prenom : ' +this.prenom, 'age : ' +this.age,
+        'numSecu :' +this.numSecu, 'dateDebut :' +this.dateDebut);
+    }
+};
+infoSalarie.afficheInfos();
+
+// création du constructeur avec les prototypes 
+
+var Salarie = function(s_nom, s_prenom, 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <script>
+s_numSecu, s_dateDebut){
+    this.nom = s_nom;
+    this.prenom = s_prenom; 
+    this.numSecu = s_numSecu;
+    this.dateDebut = s_dateDebut;
+}
+Salarie.prototype.age=45;
+Salarie.prototype.getAge = function(){
+    return this.age;
+}
+var sa = new Salarie("Natacha", "Drost", 1234567, '19/06/24');
+var sa1 = new Salarie("Kharis", "Rollin", 2365389, '29/06/23');
+var sa2 = new Salarie("Mickael", "Deleigle", 2973678, '09/06/20');
+
+Salarie.prototype.age=130;
+console.log(sa.getAge());
+console.log(sa1.getAge());
+console.log(sa2.getAge());
+// même age pour tous (45) parce qu'il s'agit
+// d'un prototype donc appliquer à tous
+// bien différencier classe et objet comme confondre vehicule et renaud 5
+</script> 
+<body>
+</body>
+</html>
